@@ -1,33 +1,31 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aviator Dashboard</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+let results = [1.25, 2.30, 1.45, 8.50, 3.10];
 
-<div class="container">
-    <h1>✈️ Aviator Dashboard</h1>
+function renderResults() {
+    const list = document.getElementById("results");
+    list.innerHTML = "";
 
-    <div class="card">
-        <h2>Dènye Rezilta yo</h2>
-        <ul id="results"></ul>
-    </div>
+    results.forEach(r => {
+        list.innerHTML += `<li>${r}x</li>`;
+    });
 
-    <div class="card">
-        <h2>Ajoute yon Rezilta</h2>
-        <input type="number" step="0.01" id="newResult" placeholder="Egzanp: 2.35">
-        <button onclick="addResult()">Ajoute</button>
-    </div>
+    const avg =
+        results.reduce((a, b) => a + b, 0) / results.length;
 
-    <div class="card">
-        <h2>Estatistik</h2>
-        <p>Mwayèn: <span id="average">0</span>x</p>
-    </div>
-</div>
+    document.getElementById("average").innerText =
+        avg.toFixed(2);
+}
 
-<script src="script.js"></script>
-</body>
-</html>
+function addResult() {
+    const input = document.getElementById("newResult");
+    const value = parseFloat(input.value);
+
+    if (!isNaN(value)) {
+        results.unshift(value);
+        input.value = "";
+        renderResults();
+    } else {
+        alert("Antre yon bon chif !");
+    }
+}
+
+renderResults();
