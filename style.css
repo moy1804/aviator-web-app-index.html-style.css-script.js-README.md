@@ -1,5 +1,5 @@
 body{
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     background:#0f172a;
     color:white;
     margin:0;
@@ -7,31 +7,28 @@ body{
 }
 
 .container{
-    max-width:600px;
+    max-width:500px;
     margin:auto;
 }
 
 .card{
     background:#1e293b;
-    padding:20px;
+    padding:15px;
     margin-bottom:15px;
-    border-radius:12px;
+    border-radius:10px;
 }
 
 input{
     width:100%;
     padding:10px;
     margin-bottom:10px;
-    border:none;
-    border-radius:8px;
 }
 
 button{
     width:100%;
     padding:10px;
-    background:#22c55e;
+    background:green;
     color:white;
     border:none;
     border-radius:8px;
-    cursor:pointer;
 }
