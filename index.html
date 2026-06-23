@@ -5,7 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aviator Dashboard</title>
 <link rel="stylesheet" href="style.css">
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
 
 <div class="container">
@@ -18,13 +22,18 @@
 
     <div class="card">
         <h2>Ajouter un résultat</h2>
-        <input type="number" id="newResult" placeholder="Ex: 2.35">
+        <input type="number" step="0.01" id="newResult" placeholder="Ex: 2.35">
         <button onclick="addResult()">Ajouter</button>
     </div>
 
     <div class="card">
         <h2>Moyenne</h2>
-        <p id="average">0</p>
+        <p><span id="average">0</span>x</p>
+    </div>
+
+    <div class="card">
+        <h2>Graf Rezilta yo</h2>
+        <canvas id="chart"></canvas>
     </div>
 </div>
 
