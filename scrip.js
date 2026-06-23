@@ -1,28 +1,27 @@
-let results = [1.25, 2.30, 1.45, 8.50, 3.10];
+let results = [1.2, 2.5, 1.8];
 
-function renderResults() {
-    const list = document.getElementById("results");
+function render() {
+    let list = document.getElementById("results");
     list.innerHTML = "";
 
     results.forEach(r => {
         list.innerHTML += `<li>${r}x</li>`;
     });
 
-    const avg =
-        results.reduce((a,b)=>a+b,0)/results.length;
-
-    document.getElementById("average").innerText =
-        avg.toFixed(2);
+    let avg = results.reduce((a,b)=>a+b,0)/results.length;
+    document.getElementById("average").innerText = avg.toFixed(2);
 }
 
 function addResult() {
-    const value =
-        parseFloat(document.getElementById("newResult").value);
+    let value = parseFloat(document.getElementById("newResult").value);
 
     if(!isNaN(value)){
         results.unshift(value);
-        renderResults();
+        document.getElementById("newResult").value = "";
+        render();
+    } else {
+        alert("Antre yon bon chif");
     }
 }
 
-renderResults();
+render();
