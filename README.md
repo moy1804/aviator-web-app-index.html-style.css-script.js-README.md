@@ -1,19 +1,31 @@
-# Aviator Dashboard 📊
+# 🚀 Aviator Dashboard
 
 Sa se yon web app ki pèmèt ou:
 - Ajoute rezilta Aviator manyèlman
 - Gade dènye rezilta yo
-- Wè mwayèn (average)
+- Wè mwayèn (average) rezilta yo
 
-## Teknoloji
+---
+
+## 🌐 Live Demo
+
+👉 https://tonusername.github.io/aviator-web-app
+
+---
+
+## 🛠️ Teknoloji
 - HTML
 - CSS
 - JavaScript
 
-## Kijan pou itilize
-1. Louvri sit la sou GitHub Pages
-2. Ajoute nouvo rezilta
-3. Gade estatistik yo
+---
 
-## Avi
-Sa se yon app analiz/statistik, li pa predi rezilta jwèt aza.
+## 📊 Fonksyon
+- Dashboard rezilta
+- Ajoute nouvo valè
+- Kalkil mwayèn otomatik
+
+---
+
+## ⚠️ Avi
+Sa se yon app analiz/statistik sèlman. Li pa predi rezilta jwèt aza.
