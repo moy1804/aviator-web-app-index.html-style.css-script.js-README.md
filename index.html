@@ -1,31 +1,33 @@
-let results = [1.25, 2.30, 1.45, 8.50, 3.10];
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aviator Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-function renderResults() {
-    const list = document.getElementById("results");
-    list.innerHTML = "";
+<div class="container">
+    <h1>✈️ Aviator Dashboard</h1>
 
-    results.forEach(r => {
-        list.innerHTML += `<li>${r}x</li>`;
-    });
+    <div class="card">
+        <h2>Résultats</h2>
+        <ul id="results"></ul>
+    </div>
 
-    const avg =
-        results.reduce((a, b) => a + b, 0) / results.length;
+    <div class="card">
+        <h2>Ajouter un résultat</h2>
+        <input type="number" id="newResult" placeholder="Ex: 2.35">
+        <button onclick="addResult()">Ajouter</button>
+    </div>
 
-    document.getElementById("average").innerText =
-        avg.toFixed(2);
-}
+    <div class="card">
+        <h2>Moyenne</h2>
+        <p id="average">0</p>
+    </div>
+</div>
 
-function addResult() {
-    const input = document.getElementById("newResult");
-    const value = parseFloat(input.value);
-
-    if (!isNaN(value)) {
-        results.unshift(value);
-        input.value = "";
-        renderResults();
-    } else {
-        alert("Antre yon bon chif !");
-    }
-}
-
-renderResults();
+<script src="script.js"></script>
+</body>
+</html>
