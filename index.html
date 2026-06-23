@@ -3,38 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aviator Dashboard</title>
+<title>Aviator Pro Dashboard</title>
 <link rel="stylesheet" href="style.css">
-
-<!-- Chart.js -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
 <div class="container">
-    <h1>✈️ Aviator Dashboard</h1>
+
+    <h1>✈️ Aviator PRO Dashboard</h1>
+
+    <div class="card">
+        <h2>Ajoute Rezilta</h2>
+        <input type="number" step="0.01" id="input" placeholder="Ex: 2.35">
+        <button onclick="addResult()">Ajoute</button>
+        <button onclick="resetData()" style="background:red;margin-top:10px;">Reset</button>
+    </div>
+
+    <div class="card">
+        <h2>Estatistik</h2>
+        <p>Mwayèn: <span id="avg">0</span>x</p>
+        <p>Total Rounds: <span id="total">0</span></p>
+    </div>
 
     <div class="card">
         <h2>Résultats</h2>
-        <ul id="results"></ul>
+        <ul id="list"></ul>
     </div>
 
     <div class="card">
-        <h2>Ajouter un résultat</h2>
-        <input type="number" step="0.01" id="newResult" placeholder="Ex: 2.35">
-        <button onclick="addResult()">Ajouter</button>
+        <h2>Graf PRO</h2>
+        <canvas id="chart" height="150"></canvas>
     </div>
 
-    <div class="card">
-        <h2>Moyenne</h2>
-        <p><span id="average">0</span>x</p>
-    </div>
-
-    <div class="card">
-        <h2>Graf Rezilta yo</h2>
-        <canvas id="chart"></canvas>
-    </div>
 </div>
 
 <script src="script.js"></script>
